@@ -1,8 +1,8 @@
 export const colors = {
-    color1: "",
-    color2: "",
+    color1: "darkcyan",
+    color2: "purple",
     opacity: "",
     shadowColor: "",
     baseLine: "",
-    textColor: "",
+    textColor: "white",
 }

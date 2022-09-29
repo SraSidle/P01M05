@@ -7,8 +7,19 @@ export const Footer = styled.footer`
   background-color: ${theme.colors.color2};
   position: absolute;
   bottom: 0;
-  /* ${({theme}) => css`
-   footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: ${theme.colors.textColor}
+  }
+  a:hover{
+    color: ${theme.colors.color1};
    }
-  `} */
+`
+export const Link = styled.a`
+  ${() => css`
+  color: white;
+  text-decoration: none;
+  `}
 `

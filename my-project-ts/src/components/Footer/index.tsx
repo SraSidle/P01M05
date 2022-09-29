@@ -2,7 +2,17 @@ import * as S from "./style";
 
 function Footer() {
   return(
-    <S.Footer>Desenvolvido por <a target="_blank" href="">@Sra_Sidle</a></S.Footer>
+    <S.Footer>
+      <p>
+      Desenvolvido por
+      <S.Link
+       target="_blank"
+       rel=""
+       href="https://www.linkedin.com/in/bianca-aguiar-642811222/">
+         __@Sra_Sidle
+      </S.Link>
+      </p>
+    </S.Footer>
   );
 }
 
