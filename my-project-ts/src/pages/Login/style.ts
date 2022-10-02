@@ -19,22 +19,22 @@ export const Login = styled.main`
       input {
         width: 15rem;
         padding: .7rem .5rem;
-        border: 1px solid #6e6e6e;
+        border: 1px solid ${theme.colors.borderLine};
         border-radius: 5px;
-        background-color: #3d3d3d;
+        background-color: ${theme.colors.color3};
         color: white;
         
       }
       input:focus{
         outline: 0;
-        border: 1px solid purple;
+        border: 1px solid ${theme.colors.color2};
       }
     }
     button {
-      background-color: purple;
+      background-color: ${theme.colors.color2};
       color: ${theme.colors.textColor};
       border-radius: 5px;
-      border: 1px solid #6e6e6e;
+      border: 1px solid ${theme.colors.borderLine};
       margin: 1rem 0;
       padding: .7rem;
       width: 10rem;

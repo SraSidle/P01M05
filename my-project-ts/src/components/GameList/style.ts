@@ -1,12 +1,13 @@
+import theme from "assets/styles/theme";
 import styled, { css } from "styled-components";
 
 export const GameList = styled.section`
-  background-color: rgb(214, 214, 214);
+  background-color: ${theme.colors.color3};
   padding: 1rem;
   margin: 1rem 2rem;
   border-radius: 7px;
-  margin: 1px solid rgb(214, 214, 150);
-  box-shadow: 3px 3px 8px 2px rgb(0, 0, 0, 0.3);
+  margin: 1px solid ${theme.colors.borderLine};
+  box-shadow: 3px 3px 8px 2px ${theme.colors.shadowColor};
   display: flex;
   flex-direction: row;
   justify-content: center;

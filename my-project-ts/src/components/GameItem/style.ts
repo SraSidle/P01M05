@@ -1,8 +1,9 @@
 import styled,{ css } from "styled-components";
+import theme from "assets/styles/theme";
 
 export const Card = styled.div`
   background-image: linear-gradient(to bottom, rgba(0, 139, 139, 0.6), rgba(107, 0, 139, 0.603), rgba(76, 139, 0, 0.6)) ;
-  border: 1px solid gray;
+  border: 1px solid ${theme.colors.borderLine};
   width: 250px;
   height: 300px;
   display: grid;
@@ -10,7 +11,7 @@ export const Card = styled.div`
   grid-template-rows: repeat(8, 1fr);
   padding: 7px;
   border-radius: 7px;
-  box-shadow: 2px 2px 6px 2px rgb(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 6px 2px ${theme.colors.shadowColor2};
   margin: 1rem;
 `;
 
@@ -24,7 +25,6 @@ export const FavoriteGame = styled.i`
   grid-column: 3/4;
   grid-row: 1/2;
   max-width: 1.5rem;
-  border: 1px solid green;
 `
 
 export const Genre = styled.p`

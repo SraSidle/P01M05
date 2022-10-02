@@ -9,15 +9,15 @@ export const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   p {
-    color: ${theme.colors.textColor}
+    color: ${theme.colors.textColor1}
   }
   a:hover{
-    color: ${theme.colors.color1};
+    color: ${theme.colors.textColorHover};
    }
 `
 export const Link = styled.a`
   ${() => css`
-  color: white;
+  color: ${theme.colors.color2};
   text-decoration: none;
   `}
 `
