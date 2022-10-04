@@ -5,11 +5,11 @@ import theme from 'assets/styles/theme';
 import { BrowserRouter } from "react-router-dom";
 import Router from 'router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import mocks from "./mocks";
+//import mocks from "./mocks";
 
 const queryClient = new QueryClient();
 
-mocks.Initialize();
+//mocks.Initialize();
 
 export default function App() {
   return (
