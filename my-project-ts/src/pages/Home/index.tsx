@@ -8,24 +8,27 @@ import { useGames } from "hooks/useGame";
 import FormCreate from "components/FormCreate";
 
 export default function Home() {
-  const dateDescription = DateTime.now().toLocaleString({...DateTime.DATE_SHORT, weekday: "long"});
+  const dateDescription = DateTime.now().toLocaleString({
+    ...DateTime.DATE_SHORT,
+    weekday: "long",
+  });
 
-  const { games, getAllGames, createGame} = useGames();
+  const { games, getAllGames, createGame } = useGames();
 
   useEffect(() => {
-    getAllGames()
-  }, [getAllGames])
+    getAllGames();
+  }, [getAllGames]);
 
-  return(
+  return (
     <S.Home>
       <FormCreate />
-      <Header />
-        <S.Welcome>
+      <Header navBoolean={true} tagBoolean={false} text="" />
+      <S.Welcome>
         <p className="saludation">Boas vindas, Usuário</p>
         <p className="date">{dateDescription}</p>
-        </S.Welcome>
-        <GameList games={games}/>
+      </S.Welcome>
+      <GameList games={games} />
       <Footer />
     </S.Home>
-  )
-} 
+  );
+}
