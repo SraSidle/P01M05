@@ -6,22 +6,21 @@ export const Login = styled.main`
     background-color: ${theme.colors.color1};
     color: ${theme.colors.textColor};
     width: 100%;
-    height: 90vh;
     text-align: center;
-    padding: 3rem 0 0 0;
+
     form {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      color: ${theme.colors.textColor};
+      color: ${theme.colors.textColor3};
+
       input {
         width: 15rem;
-        padding: .7rem .5rem;
-        border: 1px solid ${theme.colors.borderLine};
+        padding: .5rem;
+        border: 1px solid ${theme.colors.borderLine2};
         border-radius: 5px;
-        background-color: ${theme.colors.color3};
         color: white;
         
       }
@@ -32,7 +31,7 @@ export const Login = styled.main`
     }
     button {
       background-color: ${theme.colors.color2};
-      color: ${theme.colors.textColor};
+      color: ${theme.colors.textColor2};
       border-radius: 5px;
       border: 1px solid ${theme.colors.borderLine};
       margin: 1rem 0;
@@ -41,4 +40,24 @@ export const Login = styled.main`
       cursor: pointer;
     }
   `}
-`
+`;
+
+export const AreaLogin = styled.div`
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const backgroundLogin = styled.div`
+  background-color: ${theme.colors.color3};
+  width: 350px;
+  border-radius: .5rem;
+  box-shadow: 1px 1px 6px 2px ${theme.colors.shadowColor2};
+
+  .titleFormL{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: darkcyan;
+  }
+`;
