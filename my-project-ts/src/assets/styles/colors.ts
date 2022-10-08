@@ -3,7 +3,7 @@ export const colors = {
     color2: "purple",
     color3:"#d6d6d6",
 
-    opacity: "",
+    opacity: "rgba(0, 0, 0, 0.5)",
 
     shadowColor: "#0000004d",
     shadowColor2: "#00000080",
