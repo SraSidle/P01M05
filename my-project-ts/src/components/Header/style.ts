@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import theme from "assets/styles/theme";
 
 export const Header = styled.header`
@@ -37,6 +37,10 @@ export const LogoHeader = styled.div`
   align-content: center;
   justify-items: space-between;
   .nameLogo{
-    grid-column: 2/4
+    grid-column: 2/4;
+    font-style: oblique;
+    color: ${theme.colors.textColorHover};
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 `;

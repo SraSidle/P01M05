@@ -9,9 +9,7 @@ function LogoText() {
       <p className="logo__name">GameEvolution</p>
     </div>
     <p className="description_app">
-      {" "}
-      Plataforma de lista de Jogos em que você tem a experiência de
-      interagir com outras pessoas
+      Plataforma de listagem de Jogos para os amantes do mundo Gamer.
     </p>
   </S.BackgroundBodyLeft>
   );

@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import theme from "assets/styles/theme";
 
 export const BackgroundBodyLeft = styled.div`
 	width: 40%;
@@ -19,6 +20,7 @@ export const BackgroundBodyLeft = styled.div`
    .logo__name {
      font-weight: 700;
      font-size: 1rem;
+     color: ${theme.colors.textColorHover};
      font-style: oblique;
     }
     
@@ -28,5 +30,6 @@ export const BackgroundBodyLeft = styled.div`
 	  }
 
   .description_app{ 
+    font-style: italic;
   }
 `;
