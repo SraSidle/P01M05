@@ -1,8 +1,9 @@
 import * as S from "./style";
 import { useState, useCallback } from "react";
 import { useGames } from "hooks/useGame";
+import OverlayModal from "components/OverlayModal";
 
-function FormCreate() {
+function FormCreate({closeModal}: any) {
   const { games, getAllGames, createGame} = useGames();
 
   const [nameG, setNameG] = useState("");
@@ -20,9 +21,12 @@ function FormCreate() {
   }, [createGame, getAllGames, games])
 
   return(
+    <OverlayModal
+      closeModal={closeModal}
+    >
     <div>
       <h2>Adicione um novo jogo!</h2>
-      <form   
+      <S.FormC  
         onSubmit={(event) => {
         event.preventDefault();
         handleButton({name: nameG, description: descriptionG, genre: genreG, image: imageG})
@@ -52,7 +56,7 @@ function FormCreate() {
           value={genreG}
           onChange={(e) => setGenreG(e.target.value)}
           type="text"
-          placeholder=""
+          placeholder="Ação"
           required
         />
         <label>Foto</label>
@@ -64,8 +68,9 @@ function FormCreate() {
           required
         />
         <button type="submit">Adicionar</button>
-      </form>
+      </S.FormC>
     </div>
+    </OverlayModal>
   );
 }
 

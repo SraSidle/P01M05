@@ -1,12 +1,27 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import theme from "assets/styles/theme";
 
 export const Home = styled.div`
-  ${({theme}) => css`
-  background-color: ${theme.colors.color1};
-    height: 100vh;
-    color: ${theme.colors.textColor1};   
-  `}
+   background-color: ${theme.colors.color1};
+   height: 100vh;
+   color: ${theme.colors.textColor1};  
+`;
+
+export const DivButtonAdd = styled.div`
+  width: 90%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  button {
+    padding: .5rem;
+    border: solid 1px ${theme.colors.borderLine2};
+    color: ${theme.colors.textColorHover};
+    background-color: ${theme.colors.shadowColor};
+    border-radius: .3rem;
+    font-weight: 600;
+  }
 `;
 
 export const Welcome = styled.div`
@@ -25,4 +40,7 @@ export const Welcome = styled.div`
       grid-column: 3/4;
      }
 `;
+
+
+
 

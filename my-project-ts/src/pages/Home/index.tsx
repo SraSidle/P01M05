@@ -1,5 +1,5 @@
 import * as S from "./style";
-import { useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { DateTime } from "luxon";
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -15,18 +15,23 @@ export default function Home() {
 
   const { games, getAllGames, createGame } = useGames();
 
+  const [add, setAdd] = useState(false);
+
   useEffect(() => {
     getAllGames();
-  }, [getAllGames]);
+  }, [getAllGames, createGame]);
 
   return (
     <S.Home>
-      <FormCreate />
+      {add && <FormCreate closeModal={() => setAdd(false)} />}
       <Header navBoolean={true} tagBoolean={false} text="" />
       <S.Welcome>
-        <p className="saludation">Boas vindas, Usuário</p>
+        <p className="saludation">Boas vindas, Kevin</p>
         <p className="date">{dateDescription}</p>
       </S.Welcome>
+      <S.DivButtonAdd>
+        <button onClick={() => setAdd(true)}>+ Adicione um novo Jogo</button>
+      </S.DivButtonAdd>
       <GameList games={games} />
       <Footer />
     </S.Home>
